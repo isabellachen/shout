@@ -53,6 +53,7 @@ if ( ! function_exists( 'shout_theme_setup' ) ) :
 				'header' => esc_html__( 'Primary', 'shout_theme' ),
 				'social' => esc_html__( 'Social', 'shout_theme' ),
 				'terms' => esc_html__( 'Terms', 'shout_theme' ),
+				'footer' => esc_html__( 'Footer', 'shout_theme' ),
 			)
 		);
 
@@ -276,21 +277,41 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 add_action( 'widgets_init', 'menu_widget_init' );
 
 /**
- * Widget for Footer Right
+ * Widget for Footer Contact
  * Used mainly to insert a contact form into the footer
  */
 
- function footer_right_widget() {
+ function footer_contact_widget() {
 
 	register_sidebar( array(
-		'name'          => 'Footer Right widget',
-		'id'            => 'footer_right_widget',
-    'description'   => 'Widget area for footer right',
-		'before_widget' => '<div class="footer_right-widget">',
+		'name'          => 'Footer Contact widget',
+		'id'            => 'footer_contact_widget',
+    'description'   => 'Widget area for footer contact form',
+		'before_widget' => '<div class="footer_contact-widget">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h2 class="rounded">',
 		'after_title'   => '</h2>',
 	) );
 
 }
-add_action( 'widgets_init', 'footer_right_widget' );
+add_action( 'widgets_init', 'footer_contact_widget' );
+
+/**
+ * Widget for Footer Partners
+ * Used mainly to insert a contact form into the footer
+ */
+
+ function footer_partners_widget() {
+
+	register_sidebar( array(
+		'name'          => 'Footer Partners widget',
+		'id'            => 'footer_partners_widget',
+    'description'   => 'Widget area for footer partners form',
+		'before_widget' => '<div class="footer_partners-widget">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="rounded">',
+		'after_title'   => '</h2>',
+	) );
+
+}
+add_action( 'widgets_init', 'footer_partners_widget' );

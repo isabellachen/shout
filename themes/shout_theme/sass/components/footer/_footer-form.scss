@@ -1,0 +1,17 @@
+@import '../../abstracts/abstracts';
+
+.site-footer {
+  form {
+    input {
+      border: 1px solid #ffffff;
+    }
+
+    label,
+    span {
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: $screen-size-l) {
+}

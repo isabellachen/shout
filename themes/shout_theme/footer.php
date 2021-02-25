@@ -12,11 +12,54 @@
 ?>
 
 	<footer id="colophon" class="site-footer">
-    <div class="site-footer_main desktop-container">
-      <div class="site-footer_main-left">
-        <div class="site-footer_main-content">
+    <div class="site-footer_mobile">
+      <div class="site-footer_mobile-branding">
+        <?php the_custom_logo(); ?>
+        <?php
+          wp_nav_menu(
+            array(
+              'theme_location' => 'social',
+              'menu_id'        => 'social-menu',
+              'walker' => new WO_Nav_Social_Walker()
+            )
+          );
+        ?>
+        <div class="site-footer_eu">
+          <img src="<?php echo get_bloginfo('template_url') ?>/assets/images/eu-flag.png"/>
+          <p>			
+            <?php
+				      printf( esc_html__( 'Co-funded by the Erasmus+ Programme of the European Union', 'shout_theme' ));
+				    ?>
+          </p>
+        </div>
+        <?php
+          wp_nav_menu(
+            array(
+              'theme_location' => 'footer',
+              'menu_id'        => 'footer-menu'
+            )
+          );
+        ?>
+        <?php if ( is_active_sidebar( 'footer_contact_widget' ) ) : ?>
+          <?php dynamic_sidebar( 'footer_contact_widget' ); ?>
+        <?php endif; ?>
+        <div class="footer_partners-widget_container">
+          <?php if ( is_active_sidebar( 'footer_partners_widget' ) ) : ?>
+            <?php dynamic_sidebar( 'footer_partners_widget' ); ?>
+          <?php endif; ?>
+        </div>
+          <p class="footer_fineprint">			
+            <?php
+				      printf( esc_html__( 'The European Commission’s support for the production of this publication does not constitute an endorsement of the contents, which reflect the views only of the authors, and the Commission cannot be held responsible for any use which may be made of the information contained therein.', 'shout_theme' ));
+				    ?>
+          </p>
+      </div>
+    </div>
+    <div class="site-footer_desktop desktop-container">
+      <div class="site-footer_desktop-left">
+        <div class="site-footer_desktop-content">
           <div class="site-footer_branding">
-            <div>logo</div>
+            <?php the_custom_logo(); ?>
             <?php
               wp_nav_menu(
                 array(
@@ -29,7 +72,7 @@
           </div>
         </div>
       </div>
-      <div class="site-footer_main-right">
+      <div class="site-footer_desktop-right">
         <?php if ( is_active_sidebar( 'footer_right_widget' ) ) : ?>
           <?php dynamic_sidebar( 'footer_right_widget' ); ?>
         <?php endif; ?>

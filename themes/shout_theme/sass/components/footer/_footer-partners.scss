@@ -1,0 +1,13 @@
+@import '../../abstracts/abstracts';
+
+.footer_partners {
+  &-widget_container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &-widget {
+    margin-right: 0.5rem;
+    margin-top: 0.5rem;
+  }
+}

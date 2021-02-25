@@ -1,0 +1,33 @@
+@import '../../abstracts/abstracts';
+
+#footer-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-menu {
+  &_main {
+    &:before {
+      content: '>';
+      margin-right: 1.25rem;
+    }
+  }
+
+  &_submit {
+    &:before {
+      content: '>';
+      margin-right: 0.5rem;
+    }
+  }
+
+  &_main {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.3rem;
+  }
+
+  &_submit {
+    font-size: 1.35rem;
+  }
+}
