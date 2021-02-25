@@ -1047,6 +1047,11 @@ input[type='search'] {
 /*
  * SCREEN SIZES
 */
+.site-footer {
+  padding: 0 1rem;
+  background-color: bisque;
+}
+
 .site-footer a {
   text-decoration: none;
 }
@@ -1065,10 +1070,6 @@ input[type='search'] {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-}
-
-.site-footer_terms a {
-  margin-left: 0.5rem;
 }
 
 .site-footer_terms ul {
