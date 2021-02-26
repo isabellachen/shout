@@ -1,0 +1,31 @@
+@import '../../abstracts/abstracts';
+@import '../../abstracts/abstracts';
+
+.site-footer {
+  .custom-logo-link {
+    img {
+      height: 140px;
+      width: auto;
+    }
+  }
+
+  #social-menu {
+    margin: 0;
+    padding: 0;
+
+    .fa {
+      font-size: 34px;
+    }
+  }
+}
+
+@media (min-width: $screen-size-l) {
+  .site-footer {
+    &_eu {
+      img {
+        height: 48px;
+        width: auto;
+      }
+    }
+  }
+}

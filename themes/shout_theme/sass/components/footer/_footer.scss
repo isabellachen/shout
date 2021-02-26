@@ -14,12 +14,33 @@
   &_desktop {
     display: none;
   }
-
-  #social-menu {
-    margin: 0;
-    padding: 0;
-  }
 }
 
 @media (min-width: $screen-size-l) {
+  .site-footer {
+    &_desktop {
+      display: flex;
+    }
+
+    &_desktop-content {
+      display: flex;
+    }
+
+    &_mobile {
+      display: none;
+    }
+
+    &_desktop-left {
+      flex: 1.2;
+      margin-right: 8rem;
+    }
+
+    &_desktop-right {
+      flex: 1;
+    }
+  }
+}
+
+.footer_fineprint {
+  font-size: 0.75rem;
 }

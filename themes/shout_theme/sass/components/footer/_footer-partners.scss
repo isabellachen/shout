@@ -1,7 +1,7 @@
 @import '../../abstracts/abstracts';
 
 .footer_partners {
-  &-widget_container {
+  &-widget_logos {
     display: flex;
     flex-wrap: wrap;
   }
@@ -9,5 +9,14 @@
   &-widget {
     margin-right: 0.5rem;
     margin-top: 0.5rem;
+    flex-basis: 22%;
+  }
+}
+
+@media (min-width: $screen-size-m) {
+  .footer_partners {
+    &-widget {
+      flex-basis: unset;
+    }
   }
 }

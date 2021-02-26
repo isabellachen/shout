@@ -7,7 +7,11 @@
 }
 
 .footer-menu {
+  //.footer-menu_main & _submit styles are added to footer widget via wp-dashboard and not in markup
   &_main {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.3rem;
     &:before {
       content: '>';
       margin-right: 1.25rem;
@@ -15,19 +19,10 @@
   }
 
   &_submit {
+    font-size: 1.35rem;
     &:before {
       content: '>';
       margin-right: 0.5rem;
     }
-  }
-
-  &_main {
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: 1.3rem;
-  }
-
-  &_submit {
-    font-size: 1.35rem;
   }
 }
