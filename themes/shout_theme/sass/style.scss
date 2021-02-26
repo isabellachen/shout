@@ -70,6 +70,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import 'base/base';
 
 /*--------------------------------------------------------------
+# Pages
+--------------------------------------------------------------*/
+@import 'pages/pages';
+
+/*--------------------------------------------------------------
 # Layouts
 --------------------------------------------------------------*/
 // @import "layouts/content-sidebar"; // Uncomment this line for a sidebar on right side of your content.
