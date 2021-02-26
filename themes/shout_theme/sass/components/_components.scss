@@ -1,12 +1,18 @@
 /* Navigation
 --------------------------------------------- */
 @import 'navigation/navigation';
+@import 'navigation/navigation-widget';
+@import 'navigation/navigation-search';
+@import 'navigation/navigation-social';
 @import 'navigation/navigation-desktop';
 @import 'navigation/hamburger';
 
 /* Header
 --------------------------------------------- */
 @import 'header/header';
+@import 'header/header-menu';
+@import 'header/header-search';
+@import 'header/header-social';
 
 /* Footer
 --------------------------------------------- */

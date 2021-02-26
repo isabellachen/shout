@@ -1,0 +1,28 @@
+@import '../../abstracts/abstracts';
+
+.desktop-secondary_menu {
+  display: none;
+}
+
+@media (min-width: $screen-size-l) {
+  .desktop-secondary_menu {
+    display: flex;
+    align-items: center;
+    position: relative;
+    right: 60px;
+
+    #social-menu {
+      margin: 0 0.75rem 0 0;
+      padding: 0;
+
+      a {
+        font-size: 1.5rem;
+        margin-left: 0.75rem;
+        color: #000000;
+        &:hover {
+          color: #000000;
+        }
+      }
+    }
+  }
+}

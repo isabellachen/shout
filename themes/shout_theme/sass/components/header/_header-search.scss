@@ -1,0 +1,33 @@
+@import '../../abstracts/abstracts';
+
+@media (min-width: $screen-size-l) {
+  .desktop-secondary_menu {
+    .search-form {
+      height: 35px;
+      display: flex;
+      border-bottom: 1px solid rgba(255, 255, 255, 0);
+      transition: all 0.15s ease-out;
+
+      &.opened {
+        border-color: rgba(255, 255, 255, 1);
+
+        .search-field {
+          max-width: 300px;
+          opacity: 1;
+        }
+      }
+    }
+
+    .search-icon {
+      padding: 0.25rem;
+      height: 32px;
+    }
+
+    .search-field {
+      opacity: 0.1;
+      max-width: 0;
+      transition: all 0.15s ease-out;
+      width: 300px;
+    }
+  }
+}

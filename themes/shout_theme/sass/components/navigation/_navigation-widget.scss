@@ -1,0 +1,11 @@
+@import '../../abstracts/abstracts';
+
+.main-navigation {
+  .menu-widget {
+    margin: 1rem 0;
+    h2 {
+      font-family: $font__header;
+      font-size: 1.25rem;
+    }
+  }
+}

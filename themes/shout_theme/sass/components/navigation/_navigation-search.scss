@@ -1,0 +1,16 @@
+@import '../../abstracts/abstracts';
+
+.main-navigation {
+  .search-form {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0 0.5rem 0;
+    border-bottom: 1px solid #ffffff;
+  }
+
+  .search-icon {
+    margin-right: 0.6rem;
+    height: 32px;
+    padding: 0.25rem;
+  }
+}
