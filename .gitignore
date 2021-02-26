@@ -3,6 +3,9 @@ sfwd-lms/
 mu-plugins/
 mailin/
 contact-form-7/
+show-current-template/
+
+.DS_Store
 
 # Logs
 logs
