@@ -42,6 +42,15 @@ $ npm install
 - Create a new menu called "Terms Menu"
 - Set Theme Location "Terms" to "Terms Menu" in Appearance > Menus > Manage Locaitons
 
+#### Custom Menu Styling
+
+Some menu items might require custom styling, e.g. menu link text (the a tag) to be white.
+Or to have a larger margin to denote seperation of sections. We can use custom classes directly in WP admin.
+
+- Dashboard > Appearance > Menus > Screen Options > CSS Classes
+- Bootstrap helper classes are available, e.g mt-1, mb-2
+- Color classes are available, e.g color-white
+
 ### Plugins
 
 #### Mailer Subscription

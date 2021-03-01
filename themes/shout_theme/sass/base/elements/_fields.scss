@@ -65,3 +65,10 @@ input[type='search'] {
     padding: 0;
   }
 }
+
+[type='checkbox'],
+[type='radio'] {
+  box-sizing: border-box;
+  padding: 0;
+  margin-right: 0.5rem;
+}

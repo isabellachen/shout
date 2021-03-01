@@ -1,0 +1,13 @@
+@import '../../abstracts/abstracts';
+
+/*
+* Custom styles for usage with WP admin
+* styles here are added not in template markup but in WordPress
+* Dashboard > Appearance > Menus > Screen Options > CSS Classes
+*/
+
+.color-white {
+  a {
+    color: #ffffff !important;
+  }
+}

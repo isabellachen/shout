@@ -58,6 +58,7 @@
   }
 
   .menu > li > a {
+    color: #ffffff;
     padding: 0.5rem 1rem 0.5rem $left-spacer;
     text-decoration: none;
     font-size: 1.2rem;
@@ -67,6 +68,26 @@
     border-bottom: 1px solid #ffffff;
     position: relative;
     z-index: 10;
+
+    &:hover,
+    &:active,
+    &:visited {
+      color: #ffffff;
+    }
+  }
+
+  #header-menu {
+    & > li:nth-child(1) > a {
+      color: #1a1a1a;
+    }
+
+    & > li > ul {
+      li {
+        a {
+          color: #1a1a1a;
+        }
+      }
+    }
   }
 
   .sub-menu {

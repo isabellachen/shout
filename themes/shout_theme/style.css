@@ -658,6 +658,13 @@ input[type='search']::-webkit-search-cancel-button {
   }
 }
 
+[type='checkbox'],
+[type='radio'] {
+  box-sizing: border-box;
+  padding: 0;
+  margin-right: 0.5rem;
+}
+
 /*--------------------------------------------------------------
 # Pages
 --------------------------------------------------------------*/
@@ -739,6 +746,7 @@ input[type='search']::-webkit-search-cancel-button {
 }
 
 .main-navigation .menu > li > a {
+  color: #ffffff;
   padding: 0.5rem 1rem 0.5rem 1rem;
   text-decoration: none;
   font-size: 1.2rem;
@@ -748,6 +756,18 @@ input[type='search']::-webkit-search-cancel-button {
   border-bottom: 1px solid #ffffff;
   position: relative;
   z-index: 10;
+}
+
+.main-navigation .menu > li > a:hover, .main-navigation .menu > li > a:active, .main-navigation .menu > li > a:visited {
+  color: #ffffff;
+}
+
+.main-navigation #header-menu > li:nth-child(1) > a {
+  color: #1a1a1a;
+}
+
+.main-navigation #header-menu > li > ul li a {
+  color: #1a1a1a;
 }
 
 .main-navigation .sub-menu {
@@ -995,6 +1015,18 @@ input[type='search']::-webkit-search-cancel-button {
     top: 3rem;
     right: 4.4rem;
   }
+}
+
+/*
+ * SCREEN SIZES
+*/
+/*
+* Custom styles for usage with WP admin
+* styles here are added not in template markup but in WordPress
+* Dashboard > Appearance > Menus > Screen Options > CSS Classes
+*/
+.color-white a {
+  color: #ffffff !important;
 }
 
 /* Header
@@ -1348,6 +1380,10 @@ input[type='search']::-webkit-search-cancel-button {
 
 .widget select {
   max-width: 100%;
+}
+
+.menu-widget {
+  text-transform: uppercase;
 }
 
 /* Media
