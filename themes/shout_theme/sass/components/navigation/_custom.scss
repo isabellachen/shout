@@ -6,8 +6,20 @@
 * Dashboard > Appearance > Menus > Screen Options > CSS Classes
 */
 
-.color-white {
+.color-invert {
   a {
     color: #ffffff !important;
+  }
+}
+
+.no-border-bottom > .level-0.open {
+  border-bottom: none;
+}
+
+@media (min-width: $screen-size-l) {
+  .color-invert {
+    a {
+      color: #1a1a1a !important;
+    }
   }
 }

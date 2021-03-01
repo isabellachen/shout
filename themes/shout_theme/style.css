@@ -574,6 +574,10 @@ input[type="submit"]:focus {
 /*
  * SCREEN SIZES
 */
+input {
+  background-clip: padding-box;
+}
+
 input[type='text'],
 input[type='email'],
 input[type='url'],
@@ -645,14 +649,14 @@ input[type='search']:focus {
 }
 
 input[type='search']::placeholder {
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 input[type='search']::-webkit-search-cancel-button {
   display: none;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
   input[type='search'] {
     padding: 0;
   }
@@ -678,7 +682,7 @@ input[type='search']::-webkit-search-cancel-button {
 --------------------------------------------------------------*/
 /* Containers
 --------------------------------------------- */
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
   .desktop-container {
     max-width: 1280px;
     margin: 0 auto;
@@ -708,7 +712,7 @@ input[type='search']::-webkit-search-cancel-button {
 }
 
 .menu-header img {
-  height: 60px;
+  height: 84px;
   width: auto;
 }
 
@@ -749,9 +753,10 @@ input[type='search']::-webkit-search-cancel-button {
   color: #ffffff;
   padding: 0.5rem 1rem 0.5rem 1rem;
   text-decoration: none;
+  text-transform: uppercase;
   font-size: 1.2rem;
   font-weight: 600;
-  font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue", -apple-system, sans-serif;
+  font-family: "din-condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", -apple-system, sans-serif;
   display: block;
   border-bottom: 1px solid #ffffff;
   position: relative;
@@ -836,6 +841,14 @@ input[type='search']::-webkit-search-cancel-button {
   transform: rotate(180deg);
 }
 
+.main-navigation .menu > .menu-item-has-children ~ .menu-item-has-children:before {
+  content: url("./assets/icons/chevron-down-white.svg");
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  height: 23px;
+}
+
 .main-navigation .level-0 > .menu-item-has-children {
   border-top: 1px solid #ffffff;
 }
@@ -852,7 +865,7 @@ input[type='search']::-webkit-search-cancel-button {
 }
 
 .main-navigation .menu-widget h2 {
-  font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue", -apple-system, sans-serif;
+  font-family: "din-condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", -apple-system, sans-serif;
   font-size: 1.25rem;
 }
 
@@ -884,7 +897,7 @@ input[type='search']::-webkit-search-cancel-button {
 /*
  * SCREEN SIZES
 */
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
   .main-navigation .fullscreen-menu {
     background: #ef7139;
     background: linear-gradient(0deg, #ef7139 0%, #118689 70%, #359d9f 100%);
@@ -904,6 +917,7 @@ input[type='search']::-webkit-search-cancel-button {
     display: flex;
     align-items: flex-end;
     padding-bottom: 0.4rem;
+    bottom: 1rem;
   }
   .main-navigation .menu-header {
     display: flex;
@@ -918,6 +932,9 @@ input[type='search']::-webkit-search-cancel-button {
   }
   .main-navigation .menu > li {
     flex: 1;
+  }
+  .main-navigation .menu > li:first-child {
+    flex: 1.15;
   }
   .main-navigation .menu > li:not(:last-child) {
     margin-right: 0.75rem;
@@ -948,11 +965,15 @@ input[type='search']::-webkit-search-cancel-button {
   .main-navigation .menu-item-has-children:before {
     content: '';
   }
+  .main-navigation .menu > .menu-item-has-children ~ .menu-item-has-children:before {
+    content: '';
+  }
   .main-navigation .level-0 > .menu-item-has-children {
     border-top: none;
   }
   .main-navigation .menu-extra_content-inner {
     border-top: none;
+    padding: 1rem 1rem 1rem 0;
   }
   .main-navigation .menu-extra_content {
     /*change these styles accordingly to place the menu widget*/
@@ -960,6 +981,17 @@ input[type='search']::-webkit-search-cancel-button {
     position: relative;
     top: -280px;
     margin-left: 0.5rem;
+    background-color: transparent;
+  }
+  .main-navigation #header-menu > li > ul li a {
+    color: #ffffff;
+  }
+  .main-navigation .sub-menu {
+    background-color: transparent;
+  }
+  .main-navigation .menu-widget h2 {
+    font-family: "din-condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", -apple-system, sans-serif;
+    font-size: 2.5rem;
   }
   .menu-content {
     display: block;
@@ -1010,9 +1042,9 @@ input[type='search']::-webkit-search-cancel-button {
   transform: rotate(-45deg) translate(8px, -8px);
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
   .menu-toggle {
-    top: 3rem;
+    top: 3.9rem;
     right: 4.4rem;
   }
 }
@@ -1025,8 +1057,18 @@ input[type='search']::-webkit-search-cancel-button {
 * styles here are added not in template markup but in WordPress
 * Dashboard > Appearance > Menus > Screen Options > CSS Classes
 */
-.color-white a {
+.color-invert a {
   color: #ffffff !important;
+}
+
+.no-border-bottom > .level-0.open {
+  border-bottom: none;
+}
+
+@media (min-width: 1025px) {
+  .color-invert a {
+    color: #1a1a1a !important;
+  }
 }
 
 /* Header
@@ -1046,14 +1088,14 @@ input[type='search']::-webkit-search-cancel-button {
 
 .site-branding img {
   width: auto;
-  height: 60px;
+  height: 88px;
 }
 
 .site-branding_header {
   margin: 2.8rem 1rem 1rem 1rem;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
   .site-branding_header {
     margin: 2.9rem 5rem 0;
     display: flex;
@@ -1069,7 +1111,7 @@ input[type='search']::-webkit-search-cancel-button {
   display: none;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
   .desktop-secondary_menu {
     display: flex;
     align-items: center;
@@ -1093,7 +1135,7 @@ input[type='search']::-webkit-search-cancel-button {
 /*
  * SCREEN SIZES
 */
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
   .desktop-secondary_menu .search-form {
     height: 35px;
     display: flex;
@@ -1122,7 +1164,7 @@ input[type='search']::-webkit-search-cancel-button {
 /*
  * SCREEN SIZES
 */
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
   .desktop-secondary_menu #social-menu {
     margin: 0 1.25rem 0 0;
     padding: 0;
@@ -1152,14 +1194,14 @@ input[type='search']::-webkit-search-cancel-button {
 }
 
 .site-footer h2 {
-  font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue", -apple-system, sans-serif;
+  font-family: "din-condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", -apple-system, sans-serif;
 }
 
 .site-footer_desktop {
   display: none;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
   .site-footer_desktop {
     display: flex;
   }
@@ -1253,7 +1295,7 @@ input[type='search']::-webkit-search-cancel-button {
   margin-right: 0.5rem;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
   .site-footer_terms {
     flex-direction: row;
   }
@@ -1291,7 +1333,7 @@ input[type='search']::-webkit-search-cancel-button {
   font-size: 34px;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
   .site-footer_eu img {
     height: 48px;
     width: auto;
@@ -1356,7 +1398,7 @@ input[type='search']::-webkit-search-cancel-button {
   object-position: left;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
   .entry-header .featured-image {
     height: auto;
   }
@@ -1384,6 +1426,7 @@ input[type='search']::-webkit-search-cancel-button {
 
 .menu-widget {
   text-transform: uppercase;
+  color: #1a1a1a;
 }
 
 /* Media

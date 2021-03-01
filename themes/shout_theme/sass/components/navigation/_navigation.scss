@@ -17,7 +17,7 @@
 
   &-header {
     img {
-      height: 60px;
+      height: 84px;
       width: auto;
     }
   }
@@ -61,6 +61,7 @@
     color: #ffffff;
     padding: 0.5rem 1rem 0.5rem $left-spacer;
     text-decoration: none;
+    text-transform: uppercase;
     font-size: 1.2rem;
     font-weight: 600;
     font-family: $font__header;
@@ -159,6 +160,16 @@
       &:before {
         transform: rotate(180deg);
       }
+    }
+  }
+
+  .menu > .menu-item-has-children ~ .menu-item-has-children {
+    &:before {
+      content: url('./assets/icons/chevron-down-white.svg');
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      height: 23px;
     }
   }
 
