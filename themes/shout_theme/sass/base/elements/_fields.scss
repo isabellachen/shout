@@ -48,6 +48,16 @@ input[type='search'] {
   padding: 0 0 0 1rem;
   font-size: $left-spacer;
   outline: none;
+  color: #ffffff;
+  &:focus {
+    color: #ffffff;
+  }
+  &::placeholder {
+    color: #ffffff;
+  }
+  &::-webkit-search-cancel-button {
+    display: none;
+  }
 }
 
 @media (min-width: $screen-size-l) {

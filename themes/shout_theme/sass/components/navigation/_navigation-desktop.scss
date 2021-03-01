@@ -3,7 +3,13 @@
 @media (min-width: $screen-size-l) {
   .main-navigation {
     .fullscreen-menu {
-      background-color: lightsteelblue;
+      background: rgb(239, 113, 57);
+      background: linear-gradient(
+        0deg,
+        rgba(239, 113, 57, 1) 0%,
+        rgba(17, 134, 137, 1) 70%,
+        rgba(53, 157, 159, 1) 100%
+      );
       overflow: hidden;
     }
 
