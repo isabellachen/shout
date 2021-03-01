@@ -978,7 +978,7 @@ input[type='search'] {
 
 @media (min-width: 1024px) {
   .menu-toggle {
-    top: 4rem;
+    top: 3rem;
     right: 4.4rem;
   }
 }
@@ -1009,7 +1009,7 @@ input[type='search'] {
 
 @media (min-width: 1024px) {
   .site-branding_header {
-    margin: 3.8rem 5rem 0;
+    margin: 2.9rem 5rem 0;
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -1078,12 +1078,12 @@ input[type='search'] {
 */
 @media (min-width: 1024px) {
   .desktop-secondary_menu #social-menu {
-    margin: 0 0.75rem 0 0;
+    margin: 0 1.25rem 0 0;
     padding: 0;
   }
   .desktop-secondary_menu #social-menu a {
     font-size: 1.5rem;
-    margin-left: 0.75rem;
+    margin-left: 1.25rem;
     color: #ffffff;
   }
   .desktop-secondary_menu #social-menu a:hover {

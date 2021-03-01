@@ -1,14 +1,16 @@
 @import '../../abstracts/abstracts';
 
+$left-spacing: 1.25rem;
+
 @media (min-width: $screen-size-l) {
   .desktop-secondary_menu {
     #social-menu {
-      margin: 0 0.75rem 0 0;
+      margin: 0 $left-spacing 0 0;
       padding: 0;
 
       a {
         font-size: 1.5rem;
-        margin-left: 0.75rem;
+        margin-left: $left-spacing;
         color: #ffffff;
         &:hover {
           color: #ffffff;
