@@ -542,9 +542,9 @@ a:hover, a:active {
 /* Forms
 --------------------------------------------- */
 button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
+input[type='button'],
+input[type='reset'],
+input[type='submit'] {
   border: 1px solid;
   border-color: #ccc #ccc #bbb;
   border-radius: 3px;
@@ -552,22 +552,23 @@ input[type="submit"] {
   color: rgba(0, 0, 0, 0.8);
   line-height: 1;
   padding: 0.6em 1em 0.4em;
+  text-transform: uppercase;
 }
 
 button:hover,
-input[type="button"]:hover,
-input[type="reset"]:hover,
-input[type="submit"]:hover {
+input[type='button']:hover,
+input[type='reset']:hover,
+input[type='submit']:hover {
   border-color: #ccc #bbb #aaa;
 }
 
 button:active, button:focus,
-input[type="button"]:active,
-input[type="button"]:focus,
-input[type="reset"]:active,
-input[type="reset"]:focus,
-input[type="submit"]:active,
-input[type="submit"]:focus {
+input[type='button']:active,
+input[type='button']:focus,
+input[type='reset']:active,
+input[type='reset']:focus,
+input[type='submit']:active,
+input[type='submit']:focus {
   border-color: #aaa #bbb #bbb;
 }
 
@@ -656,6 +657,44 @@ input[type='search']::-webkit-search-cancel-button {
   display: none;
 }
 
+input[type='text'],
+input[type='email'] {
+  border-radius: 0;
+  padding: 0 0 0 1rem;
+  font-size: 1rem;
+  outline: none;
+  color: #ffffff;
+  height: 44px;
+}
+
+input[type='text']:focus,
+input[type='email']:focus {
+  color: #ffffff;
+}
+
+input[type='text']::placeholder,
+input[type='email']::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+}
+
+textarea {
+  border-radius: 0;
+  background-color: transparent;
+  padding: 1rem;
+  color: #ffffff;
+  outline: none;
+}
+
+textarea:focus {
+  color: #ffffff;
+}
+
+textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+}
+
 @media (min-width: 1025px) {
   input[type='search'] {
     padding: 0;
@@ -703,6 +742,7 @@ input[type='search']::-webkit-search-cancel-button {
   height: 100%;
   display: flex;
   flex-direction: column;
+  letter-spacing: 0.8px;
 }
 
 .menu-content_container {
@@ -1185,25 +1225,36 @@ input[type='search']::-webkit-search-cancel-button {
  * SCREEN SIZES
 */
 .site-footer {
-  padding: 0 1rem;
-  background-color: lightseagreen;
+  background: #ef7139;
+  background: linear-gradient(0deg, #ef7139 0%, #118689 70%, #359d9f 100%);
 }
 
 .site-footer a {
   text-decoration: none;
+  color: #ffffff;
+}
+
+.site-footer a:hover {
+  color: #ffffff;
 }
 
 .site-footer h2 {
   font-family: "din-condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", -apple-system, sans-serif;
+  letter-spacing: 0.8px;
 }
 
 .site-footer_desktop {
   display: none;
 }
 
+.site-footer_mobile {
+  margin: 0 1rem;
+}
+
 @media (min-width: 1025px) {
   .site-footer_desktop {
     display: flex;
+    padding: 4rem 0 1rem;
   }
   .site-footer_desktop-content {
     display: flex;
@@ -1222,6 +1273,15 @@ input[type='search']::-webkit-search-cancel-button {
 
 .footer_fineprint {
   font-size: 0.75rem;
+  margin: 1rem 0 0.75rem;
+  color: #ffffff;
+}
+
+/*
+ * SCREEN SIZES
+*/
+.footer-menu_submit a {
+  color: #1a1a1a !important;
 }
 
 /*
@@ -1231,6 +1291,7 @@ input[type='search']::-webkit-search-cancel-button {
   list-style: none;
   margin: 0;
   padding: 0;
+  letter-spacing: 0.8px;
 }
 
 .footer-menu_main {
@@ -1253,6 +1314,12 @@ input[type='search']::-webkit-search-cancel-button {
   margin-right: 0.5rem;
 }
 
+@media (min-width: 1025px) {
+  #footer-menu {
+    margin-left: 3rem;
+  }
+}
+
 /*
  * SCREEN SIZES
 */
@@ -1267,7 +1334,20 @@ input[type='search']::-webkit-search-cancel-button {
   flex-basis: 22%;
 }
 
+.footer_partners-container h2 {
+  text-transform: uppercase;
+  font-size: 34px;
+  color: #ffffff;
+  margin-top: 2rem;
+}
+
 @media (min-width: 768px) {
+  .footer_partners {
+    margin-top: 2rem;
+  }
+  .footer_partners h2 {
+    margin-bottom: 1.5rem;
+  }
   .footer_partners-widget {
     flex-basis: unset;
   }
@@ -1276,10 +1356,17 @@ input[type='search']::-webkit-search-cancel-button {
 /*
  * SCREEN SIZES
 */
+.site-footer_terms-container {
+  background-color: #1a1a1a;
+}
+
 .site-footer_terms {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
 }
 
 .site-footer_terms ul {
@@ -1295,21 +1382,36 @@ input[type='search']::-webkit-search-cancel-button {
   margin-right: 0.5rem;
 }
 
+.site-footer_terms-copyright {
+  margin-bottom: 0.75rem;
+}
+
 @media (min-width: 1025px) {
   .site-footer_terms {
     flex-direction: row;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1.5rem 0;
   }
 }
 
 /*
  * SCREEN SIZES
 */
-.site-footer form input {
+.site-footer form input,
+.site-footer form textarea {
   border: 1px solid #ffffff;
 }
 
 .site-footer form label,
 .site-footer form span {
+  width: 100%;
+}
+
+.site-footer form input[type='submit'] {
+  background-color: #fcf9f9;
+  border-radius: 0;
+  height: 56px;
   width: 100%;
 }
 
@@ -1325,7 +1427,7 @@ input[type='search']::-webkit-search-cancel-button {
 }
 
 .site-footer #social-menu {
-  margin: 0;
+  margin: 1.5rem 0 2rem;
   padding: 0;
 }
 
@@ -1333,10 +1435,70 @@ input[type='search']::-webkit-search-cancel-button {
   font-size: 34px;
 }
 
-@media (min-width: 1025px) {
-  .site-footer_eu img {
-    height: 48px;
-    width: auto;
+.site-footer #social-menu a:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.site-footer_eu img {
+  height: 48px;
+  width: auto;
+}
+
+/*
+ * SCREEN SIZES
+*/
+/*
+ * SCREEN SIZES
+*/
+.site-footer_mobile-branding {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+/*
+ * SCREEN SIZES
+*/
+/*
+ * SCREEN SIZES
+*/
+.footer_contact-widget {
+  color: #ffffff;
+}
+
+.footer_contact-widget h2 {
+  font-size: 34px;
+  text-transform: uppercase;
+  margin-top: 2rem;
+}
+
+.wpcf7-form a {
+  text-decoration: underline;
+}
+
+.wpcf7-form .wpcf7-list-item {
+  margin: 0;
+}
+
+.wpcf7-form p {
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.wpcf7-form .ajax-loader {
+  position: absolute;
+  right: 0;
+  top: 1rem;
+}
+
+.wpcf7-form .wpcf7-response-output {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  h2 {
+    margin-top: 0;
   }
 }
 
@@ -1344,11 +1506,6 @@ input[type='search']::-webkit-search-cancel-button {
 --------------------------------------------- */
 .sticky {
   display: block;
-}
-
-.post,
-.page {
-  margin: 0 0 1.5em;
 }
 
 .updated:not(.published) {

@@ -1,6 +1,9 @@
 @import '../../abstracts/abstracts';
 
 .site-footer {
+  &_terms-container {
+    background-color: #1a1a1a;
+  }
   &_terms {
     display: flex;
     justify-content: space-between;
@@ -20,6 +23,14 @@
         }
       }
     }
+
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+  }
+
+  &_terms-copyright {
+    margin-bottom: 0.75rem;
   }
 }
 
@@ -27,6 +38,9 @@
   .site-footer {
     &_terms {
       flex-direction: row;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 1.5rem 0;
     }
   }
 }

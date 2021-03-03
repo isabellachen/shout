@@ -18,11 +18,15 @@
 /* Footer
 --------------------------------------------- */
 @import 'footer/footer';
+@import 'footer/custom';
 @import 'footer/footer-menu';
 @import 'footer/footer-partners';
 @import 'footer/footer-terms';
 @import 'footer/footer-form';
-@import 'footer/footer-content';
+@import 'footer/footer-branding-shared';
+@import 'footer/footer-branding-mobile';
+@import 'footer/footer-branding-desktop';
+@import 'footer/footer-contact-widget';
 
 /* Posts and pages
 --------------------------------------------- */

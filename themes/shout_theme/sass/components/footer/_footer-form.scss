@@ -2,12 +2,20 @@
 
 .site-footer {
   form {
-    input {
+    input,
+    textarea {
       border: 1px solid #ffffff;
     }
 
     label,
     span {
+      width: 100%;
+    }
+
+    input[type='submit'] {
+      background-color: #fcf9f9;
+      border-radius: 0;
+      height: 56px;
       width: 100%;
     }
   }

@@ -13,21 +13,23 @@
 
 	<footer id="colophon" class="site-footer">
     <div class="site-footer_mobile">
-      <a href="<?php echo get_site_url(); ?>" class="custom-logo-link">
-         <img src="<?php echo get_bloginfo('template_url') ?>/assets/images/shout-logo-simple.png"/>
-      </a>
-      <?php
-        wp_nav_menu(
-          array(
-            'theme_location' => 'social',
-            'menu_id'        => 'social-menu',
-            'walker' => new WO_Nav_Social_Walker()
-          )
-        );
-      ?>
-      <div class="site-footer_eu">
-        <img src="<?php echo get_bloginfo('template_url') ?>/assets/images/eu-sponsorship.png"/>
-      </div>
+      <div class="site-footer_mobile-branding">
+        <a href="<?php echo get_site_url(); ?>" class="custom-logo-link">
+          <img src="<?php echo get_bloginfo('template_url') ?>/assets/images/shout-logo-simple.png"/>
+        </a>
+        <?php
+          wp_nav_menu(
+            array(
+              'theme_location' => 'social',
+              'menu_id'        => 'social-menu',
+              'walker' => new WO_Nav_Social_Walker()
+            )
+          );
+        ?>
+        <div class="site-footer_eu">
+          <img src="<?php echo get_bloginfo('template_url') ?>/assets/images/eu-sponsorship.png"/>
+        </div>
+      </div><!--.site-footer_branding-->
       <?php
         wp_nav_menu(
           array(
@@ -39,7 +41,7 @@
       <?php if ( is_active_sidebar( 'footer_contact_widget' ) ) : ?>
         <?php dynamic_sidebar( 'footer_contact_widget' ); ?>
       <?php endif; ?>
-      <div class="footer_partners_container">
+      <div class="footer_partners-container">
         <h2>
 	        <?php
 				    /* translators: %s: CMS name, i.e. WordPress. */
@@ -87,7 +89,7 @@
             );
           ?>
         </div>
-        <div class="footer_partners_container">
+        <div class="footer_partners-container">
           <h2>
 	          <?php
 				      /* translators: %s: CMS name, i.e. WordPress. */
@@ -112,22 +114,24 @@
         <?php endif; ?>
       </div>
     </div><!--site-footer_desktop-->
-		<div class="site-footer_terms desktop-container">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'shout_theme' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( '© %d %s', 'shout_theme' ), date("Y"), 'SHOUT - SSH for Sustainable Innovation' );
-				?>
-			</a>
-      <?php
-        wp_nav_menu(
-          array(
-            'theme_location' => 'terms',
-            'menu_id'        => 'terms-menu',
-          )
-        );
-      ?>
-		</div><!-- .site-footer_terms -->
+    <div class="site-footer_terms-container">
+      <div class="site-footer_terms">
+        <a class="site-footer_terms-copyright" href="<?php echo esc_url( __( 'https://wordpress.org/', 'shout_theme' ) ); ?>">
+          <?php
+          /* translators: %s: CMS name, i.e. WordPress. */
+          printf( esc_html__( '© %d %s', 'shout_theme' ), date("Y"), 'SHOUT - SSH for Sustainable Innovation' );
+          ?>
+        </a>
+        <?php
+          wp_nav_menu(
+            array(
+              'theme_location' => 'terms',
+              'menu_id'        => 'terms-menu',
+            )
+          );
+        ?>
+      </div><!-- .site-footer_terms -->
+    </div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

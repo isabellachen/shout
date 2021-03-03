@@ -64,6 +64,40 @@ input[type='search'] {
   }
 }
 
+input[type='text'],
+input[type='email'] {
+  border-radius: 0;
+  padding: 0 0 0 1rem;
+  font-size: 1rem;
+  outline: none;
+  color: #ffffff;
+  height: 44px;
+  &:focus {
+    color: #ffffff;
+  }
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+  }
+}
+
+textarea {
+  border-radius: 0;
+  background-color: transparent;
+  padding: 1rem;
+  color: #ffffff;
+  outline: none;
+
+  &:focus {
+    color: #ffffff;
+  }
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+  }
+}
+
 @media (min-width: $screen-size-l) {
   input[type='search'] {
     padding: 0;

@@ -4,6 +4,7 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  letter-spacing: 0.8px;
 }
 
 .footer-menu {
@@ -24,5 +25,11 @@
       content: '>';
       margin-right: 0.5rem;
     }
+  }
+}
+
+@media (min-width: $screen-size-l) {
+  #footer-menu {
+    margin-left: 3rem;
   }
 }

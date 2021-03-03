@@ -1,18 +1,34 @@
 @import '../../abstracts/abstracts';
 
 .site-footer {
-  padding: 0 1rem;
-  background-color: lightseagreen;
+  background: rgb(239, 113, 57);
+  background: linear-gradient(
+    0deg,
+    rgba(239, 113, 57, 1) 0%,
+    rgba(17, 134, 137, 1) 70%,
+    rgba(53, 157, 159, 1) 100%
+  );
+
   a {
     text-decoration: none;
+    color: #ffffff;
+
+    &:hover {
+      color: #ffffff;
+    }
   }
 
   h2 {
     font-family: $font__header;
+    letter-spacing: 0.8px;
   }
 
   &_desktop {
     display: none;
+  }
+
+  &_mobile {
+    margin: 0 1rem;
   }
 }
 
@@ -20,6 +36,7 @@
   .site-footer {
     &_desktop {
       display: flex;
+      padding: 4rem 0 1rem;
     }
 
     &_desktop-content {
@@ -43,4 +60,6 @@
 
 .footer_fineprint {
   font-size: 0.75rem;
+  margin: 1rem 0 0.75rem;
+  color: #ffffff;
 }
