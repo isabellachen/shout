@@ -11,9 +11,11 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-    <?php
-      echo get_the_post_thumbnail( $post_id, 'full', array( 'class' => 'featured-image' ) );
-    ?>
+    <div class="entry-header_hero">
+      <?php
+        echo get_the_post_thumbnail( $post_id, 'full', array( 'class' => 'featured-image' ) );
+      ?>
+    </div>
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 

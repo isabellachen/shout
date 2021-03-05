@@ -1,0 +1,31 @@
+@import '../../../abstracts/abstracts';
+
+.learndash-wrapper {
+  .ld-button.ld-login-button,
+  .ld-button.ld-logout {
+    display: flex;
+    justify-content: space-between !important;
+    margin: 0;
+    background-color: #1a1a1a;
+    border-radius: 0;
+    height: 58px;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+
+    &:after {
+      content: url('./assets/icons/arrow-right.svg');
+    }
+  }
+
+  .ld-icon.ld-icon-login.ld-icon-left {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .learndash-wrapper .ld-login-modal {
+    top: 0;
+  }
+}

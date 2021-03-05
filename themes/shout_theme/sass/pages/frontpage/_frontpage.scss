@@ -1,4 +1,53 @@
 @import '../../abstracts/abstracts';
 
 .frontpage {
+  .entry-header {
+    &_intro-container {
+      position: absolute;
+      bottom: 2rem;
+      width: 100%;
+    }
+
+    &_intro {
+      background-color: #359d9f;
+      padding: 1rem;
+      letter-spacing: 0.5px;
+      width: 500px;
+    }
+
+    &_title {
+      font-family: $font__header;
+      font-size: 3rem;
+      text-transform: uppercase;
+      color: #ffffff;
+      margin: 0;
+    }
+
+    &_links {
+      font-size: 1.35rem;
+      padding: 0;
+      display: flex;
+      list-style: none;
+      text-transform: uppercase;
+      margin: 0.5rem 0;
+      font-weight: 600;
+
+      a {
+        color: #1a1a1a;
+      }
+
+      li:not(:last-child) {
+        &:after {
+          content: '.';
+          margin: 0 0.5rem;
+        }
+      }
+    }
+
+    &_excerpt {
+      font-size: 1.2rem;
+      color: #ffffff;
+      margin: 1.2rem 0;
+    }
+  }
 }

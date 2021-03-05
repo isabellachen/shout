@@ -11,6 +11,11 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
+    <div class="entry-header_hero">
+      <?php
+        echo get_the_post_thumbnail( $post_id, 'full', array( 'class' => 'featured-image' ) );
+      ?>
+    </div>
 		<?php
 		if ( is_singular() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
@@ -28,8 +33,6 @@
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
-
-	<?php shout_theme_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php
