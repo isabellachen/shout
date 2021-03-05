@@ -726,7 +726,9 @@ textarea::placeholder {
   background-color: #359d9f;
   padding: 1rem;
   letter-spacing: 0.5px;
-  width: 500px;
+  max-width: 500px;
+  width: auto;
+  margin: 0 1rem;
 }
 
 .frontpage .entry-header_title {
@@ -1204,16 +1206,32 @@ textarea::placeholder {
     position: relative;
     right: 60px;
   }
-  .desktop-secondary_menu #social-menu {
+  .desktop-secondary_login .learndash-wrapper .ld-button.ld-login-button,
+  .desktop-secondary_login .learndash-wrapper .ld-button.ld-logout {
+    margin: 0;
+    height: 58px;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+    background-color: transparent;
+    text-transform: none;
+    text-decoration: underline;
+    padding: 0;
+  }
+  .desktop-secondary_login .learndash-wrapper .ld-button.ld-login-button:after,
+  .desktop-secondary_login .learndash-wrapper .ld-button.ld-logout:after {
+    content: '';
+  }
+  .desktop-secondary #social-menu {
     margin: 0 0.75rem 0 0;
     padding: 0;
   }
-  .desktop-secondary_menu #social-menu a {
+  .desktop-secondary #social-menu a {
     font-size: 1.5rem;
     margin-left: 0.75rem;
     color: #000000;
   }
-  .desktop-secondary_menu #social-menu a:hover {
+  .desktop-secondary #social-menu a:hover {
     color: #000000;
   }
 }

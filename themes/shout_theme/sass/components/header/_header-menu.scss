@@ -5,11 +5,34 @@
 }
 
 @media (min-width: $screen-size-l) {
-  .desktop-secondary_menu {
-    display: flex;
-    align-items: center;
-    position: relative;
-    right: 60px;
+  .desktop-secondary {
+    &_menu {
+      display: flex;
+      align-items: center;
+      position: relative;
+      right: 60px;
+    }
+
+    &_login {
+      .learndash-wrapper {
+        .ld-button.ld-login-button,
+        .ld-button.ld-logout {
+          margin: 0;
+          height: 58px;
+          font-size: 1.1rem;
+          letter-spacing: 1px;
+          font-weight: 500;
+          background-color: transparent;
+          text-transform: none;
+          text-decoration: underline;
+          padding: 0;
+
+          &:after {
+            content: '';
+          }
+        }
+      }
+    }
 
     #social-menu {
       margin: 0 0.75rem 0 0;

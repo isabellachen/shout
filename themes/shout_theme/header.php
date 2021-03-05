@@ -31,6 +31,9 @@
         <?php the_custom_logo(); ?>
       </div><!-- .site-branding -->
       <div class="desktop-secondary_menu">
+        <div class="desktop-secondary_login">
+          <?php echo do_shortcode('[learndash_login login_label="Login/Register" logout_label="Logout"]'); ?>
+        </div>
         <?php
           wp_nav_menu(
             array(
