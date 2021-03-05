@@ -1778,6 +1778,43 @@ textarea::placeholder {
   }
 }
 
+.wpcf7-list-item label {
+  position: relative;
+}
+
+.wpcf7-list-item input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.wpcf7-list-item span:before {
+  content: '';
+  display: inline-block;
+  position: relative;
+  margin-right: 0.75rem;
+  top: 0.35rem;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  border: 1px solid #ffffff;
+}
+
+.wpcf7-list-item label input:checked ~ span:after {
+  content: '';
+  width: 6px;
+  height: 14px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  transform: rotate(45deg);
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+
 /* Jetpack infinite scroll
 --------------------------------------------- */
 /* Hide the Posts Navigation and the Footer when Infinite Scroll is in use. */
