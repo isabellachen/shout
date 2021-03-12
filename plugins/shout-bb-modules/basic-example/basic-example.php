@@ -23,6 +23,8 @@ class FLBasicExampleModule extends FLBuilderModule {
             'editor_export' => true, // Defaults to true and can be omitted.
             'enabled'       => true, // Defaults to true and can be omitted.
         ));
+
+        $this->add_css( 'basic-example', $this->url . 'css/frontend.css' );
     }
 }
 

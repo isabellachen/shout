@@ -1,0 +1,21 @@
+/* #E86534 */
+
+.fl-mission-header a {
+  text-decoration: none;
+  color: #1a1a1a;
+}
+
+.fl-mission-header i {
+  /* font-size: 48px; */
+}
+
+.fl-mission-header h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-family: 'din-condensed', 'HelveticaNeue-CondensedBold', 'Helvetica Neue',
+    -apple-system, sans-serif;
+}
+
+.fl-mission-header h2:hover {
+  text-decoration: underline;
+}

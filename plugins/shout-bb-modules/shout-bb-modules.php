@@ -14,6 +14,7 @@ function my_load_module_examples() {
   if ( class_exists( 'FLBuilder' ) ) {
       // Include your custom modules here.
       require_once 'basic-example/basic-example.php';
+      require_once 'mission/mission.php';
   }
 }
 add_action( 'init', 'my_load_module_examples' );
