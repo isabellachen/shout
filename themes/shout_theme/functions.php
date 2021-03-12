@@ -315,3 +315,41 @@ add_action( 'widgets_init', 'footer_contact_widget' );
 
 }
 add_action( 'widgets_init', 'footer_partners_widget' );
+
+/**
+ * Dequeue and Defer styles and JS for performance
+ */
+
+ /**
+ * Remove gutenberg block library
+ */
+function caringmedic_remove_wp_block_library_css(){
+    wp_dequeue_style( 'wp-block-library' );
+    wp_dequeue_style( 'wp-block-library-theme' );
+    wp_dequeue_style( 'wc-block-style' ); // Remove WooCommerce block CSS
+} 
+add_action( 'wp_enqueue_scripts', 'caringmedic_remove_wp_block_library_css', 100 );
+
+/**
+ * Remove dashicons for non admins
+ */
+function caringmedic_dequeue_dashicon() {
+    if (current_user_can( 'update_core' )) {
+        return;
+    }
+    wp_deregister_style('dashicons');
+}
+add_action( 'wp_enqueue_scripts', 'caringmedic_dequeue_dashicon' );
+
+/**
+ * Defer JS
+ */
+function defer_parsing_of_js( $url ) {
+    if ( is_user_logged_in() ) return $url; //don't break WP Admin
+    if ( FALSE === strpos( $url, '.js' ) ) return $url;
+    if ( strpos( $url, 'jquery.js' ) ) return $url;
+    if ( strpos( $url, 'jquery.min.js' ) ) return $url;
+    if ( strpos( $url, 'jquery-migrate.min.js' ) ) return $url;
+    return str_replace( ' src', ' defer src', $url );
+}
+add_filter( 'script_loader_tag', 'defer_parsing_of_js', 10 );

@@ -716,13 +716,20 @@ textarea::placeholder {
 /*
  * SCREEN SIZES
 */
-.frontpage .entry-header_intro-container {
+/*
+ * SCREEN SIZES
+*/
+.frontpage-header {
+  position: relative;
+}
+
+.frontpage-header_intro-container {
   position: absolute;
   bottom: 2rem;
   width: 100%;
 }
 
-.frontpage .entry-header_intro {
+.frontpage-header_intro {
   background-color: #359d9f;
   padding: 1rem;
   letter-spacing: 0.5px;
@@ -731,7 +738,7 @@ textarea::placeholder {
   margin: 0 1rem;
 }
 
-.frontpage .entry-header_title {
+.frontpage-header_title {
   font-family: "din-condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", -apple-system, sans-serif;
   font-size: 3rem;
   text-transform: uppercase;
@@ -739,7 +746,7 @@ textarea::placeholder {
   margin: 0;
 }
 
-.frontpage .entry-header_links {
+.frontpage-header_links {
   font-size: 1.35rem;
   padding: 0;
   display: flex;
@@ -749,16 +756,16 @@ textarea::placeholder {
   font-weight: 600;
 }
 
-.frontpage .entry-header_links a {
+.frontpage-header_links a {
   color: #1a1a1a;
 }
 
-.frontpage .entry-header_links li:not(:last-child):after {
+.frontpage-header_links li:not(:last-child):after {
   content: '.';
   margin: 0 0.5rem;
 }
 
-.frontpage .entry-header_excerpt {
+.frontpage-header_excerpt {
   font-size: 1.2rem;
   color: #ffffff;
   margin: 1.2rem 0;
